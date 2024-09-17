@@ -13,22 +13,22 @@ function App() {
 
     script.onload = () => {
       const options = {
-        key: 'rzp_live_s81SgI1QzQVvkr', // Replace with your Razorpay Key ID
+        key: 'rzp_test_a5IHmEsWCCdHsy', // Replace with your Razorpay Key ID
         amount: 500 * 100, // amount in paisa
         currency: 'INR',
         name: 'Chemictionary',
-        description: 'CM Guide Course 2025',
+        description: 'GATE Guide Course 2025',
         prefill: {
           email: "sahilkalkal108@gmail.com",
           contact: "+917982294822"
         },
-        notes: {
-          app_name: 'Chemictionary'
-        },
         handler: function (response) {
           // Payment successful, console the paymentId, orderId, and signature (used as invoiceId)
           console.log('Payment ID:', response.razorpay_payment_id);
+          console.log('Order ID:', response.razorpay_order_id);
+          console.log('Invoice (Signature) ID:', response.razorpay_signature);
 
+          alert('Payment successful! Check the console for payment details.');
         },
         modal: {
           ondismiss: function () {
@@ -44,9 +44,14 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handlePayment}>
+      {/* <button onClick={handlePayment}>
         Pay Now
-      </button>
+      </button> */}
+
+      <a href='https://rzp.io/l/boZdtKh3dl' target='blank' >
+        Pay Now
+      </a>
+
     </div>
   );
 }
