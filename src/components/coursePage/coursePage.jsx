@@ -1,6 +1,7 @@
 import "../../global.scss"
 import stopwatch from "./stopwatch.png"
 import booki from "./book.png"
+import { Link } from "react-router-dom"
 
 function CoursePage() {
     return (
@@ -23,9 +24,11 @@ function CoursePage() {
                         <div className="course-page-sub">
                             <img className="sub-img" src="https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/86062/courses/105497/1700637084527GATE%20Guidence_thumbnails%20%284%29.png" />
                             <div className="sub-dets">
-                                <h6 className="sub-name">
-                                    Discrete Mathematics for GATE
-                                </h6>
+                                <Link to="/learn/GATE-Guidance-Plus-2025/classes">
+                                    <h6 className="sub-name">
+                                        Discrete Mathematics for GATE
+                                    </h6>
+                                </Link>
                                 <p className="sub-videos">
                                     100 videos
                                 </p>

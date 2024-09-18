@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../global.scss"
 import kglogo from "./kglogo.png"
 
@@ -5,7 +6,9 @@ function Nav() {
     return (
         <div className="NavBar">
             <div className="nav">
-                <img className="logo" src={kglogo} />
+                <Link to="/">
+                    <img className="logo" src={kglogo} />
+                </Link>
 
                 <div className="menu">
                     <p className="menu-item">Community</p>

@@ -1,8 +1,9 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/home/home";
 import Nav from "./components/nav";
 import "./global.scss"
 import CoursePage from "./components/coursePage/coursePage";
+import VideoPage from "./components/videoPage/videoPage";
 
 function App() {
 
@@ -44,14 +45,22 @@ function App() {
       rzp.open();
     };
   };
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
+
 
   return (
     <div className="App">
-      <Nav />
+      {
+        isActive("/learn/GATE-Guidance-Plus-2025/classes") ? null : <Nav />
+      }
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/learn/GATE-Guidance-Plus-2025" element={<CoursePage />} />
+        <Route path="/learn/GATE-Guidance-Plus-2025/classes" element={<VideoPage />} />
       </Routes>
 
 

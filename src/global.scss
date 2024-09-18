@@ -38,6 +38,7 @@ html {
     .logo {
         width: 80px;
         height: auto;
+        cursor: pointer;
     }
 
     .menu-item {
@@ -356,5 +357,219 @@ html {
         padding: .4cm;
         overflow-y: auto;
         max-height: 15cm;
+    }
+}
+
+.VideoPage {
+    .video-page {
+        display: flex;
+        height: 100svh;
+    }
+
+
+    .video-page-left {
+        width: 100%;
+        border-right: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        overflow-y: auto;
+        max-height: 100svh;
+    }
+
+    .video-page-right {
+        width: 12cm;
+        flex-shrink: 0;
+        max-height: 100svh;
+        overflow: hidden;
+
+    }
+
+
+
+    .syllabus-video-head {
+        display: flex;
+        align-items: center;
+        gap: .2cm;
+    }
+
+    .syllab-head {
+        font-size: 1.375rem;
+        font-weight: 500;
+        padding: .3cm;
+        border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-4);
+    }
+
+    .video-img {
+        width: .4cm;
+        opacity: .6;
+    }
+
+    .video-name {
+        font-size: 1rem;
+        font-weight: 400;
+        cursor: pointer;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+
+    .video-time {
+        font-size: .75rem;
+        font-weight: 400;
+        color: var(--theme-ui-colors-text-basic-color-2);
+        opacity: 0.8;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        margin-left: .7cm;
+    }
+
+    .syllabus-video {
+        display: flex;
+        flex-direction: column;
+        gap: .2cm;
+        padding: .5cm .3cm;
+        border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-4);
+    }
+
+    .video-page-left-head {
+        display: flex;
+        align-items: center;
+        gap: .5cm;
+        padding: .3cm;
+        border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-4);
+    }
+
+    .sub-name-video {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .larr {
+        width: .3cm;
+        cursor: pointer;
+    }
+
+    .video-player {
+        // border: 1px solid white;
+        border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        background-color: #151a30;
+        aspect-ratio: 16/9;
+    }
+
+    .vp-course-name {
+        font-size: 1.625rem;
+        font-weight: 500;
+    }
+
+    .vp-course-price-dis {
+        font-size: 1.375rem;
+        font-weight: 500;
+    }
+
+    .vp-course-price {
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration-line: line-through;
+        color: rgb(197, 206, 224);
+    }
+
+    .syllabus-videos {
+        overflow-y: auto;
+        max-height: 90svh;
+    }
+
+    .vp-buy-now {
+        padding: .3cm .6cm;
+        background-color: #99cfff;
+        color: #222b45;
+        border: 1px solid #99cfff;
+        font-size: 16px;
+        border-radius: 5px;
+        width: fit-content;
+        margin-top: .5cm;
+    }
+
+    .vp-course-price-div {
+        display: flex;
+        align-items: center;
+        gap: .3cm;
+    }
+
+    .video-player-course-dets {
+        display: flex;
+        flex-direction: column;
+        gap: .3cm;
+        // border: 1px solid white;
+
+    }
+
+    .vp-course-dets-box {
+        // border: 1px solid red;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: .5cm 1cm;
+    }
+
+    .tilldate {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    .signinvp {
+        font-size: 1rem;
+    }
+
+    .signintext {
+        color: blueviolet;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .about-bar-vp {
+        padding: .3cm .5cm;
+        border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-4);
+    }
+
+    .vp-about-section {
+        padding: .5cm;
+        display: flex;
+        flex-direction: column;
+        gap: .3cm;
+    }
+
+    .vp-video-big-name {
+        font-size: 1.875rem;
+        font-weight: 500;
+    }
+
+    .author-section {
+        margin-top: .7cm;
+        display: flex;
+        gap: .3cm;
+        flex-direction: column;
+    }
+
+    .author-img {
+        width: 1.3cm;
+        border-radius: 50%
+    }
+
+    .author-data {
+        display: flex;
+        align-items: center;
+        gap: .2cm;
+        margin-top: .2cm;
+    }
+
+    .author-name {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .vp-about-section {
+        display: flex;
+        flex-direction: column;
     }
 }
