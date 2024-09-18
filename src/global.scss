@@ -6,6 +6,19 @@
     color: white;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+    border-radius: 10px;
+    /* This adds the border radius */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    /* Border radius for the scrollbar thumb */
+}
+
 body,
 html {
     background-color: var(--theme-ui-colors-border-basic-color-1);
@@ -186,13 +199,16 @@ html {
         padding: 12px;
         border-radius: 10px;
         background-color: var(--theme-ui-colors-border-basic-color-4);
+        height: fit-content;
     }
 
-    
+
 
     .course-page-left {
         width: 100%;
-        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        gap: .3cm;
     }
 
     .course-page-img-box {
@@ -246,12 +262,99 @@ html {
         padding: 12px 10px;
         font-size: 16px;
         margin-top: .3cm;
+        cursor: pointer;
     }
-    .course-page-right-lower{
+
+    .course-page-right-lower {
         display: flex;
         flex-direction: column;
         gap: .2cm;
         margin-top: 12px;
-        padding-bottom: .3cm;
+        padding-bottom: .5cm;
+        border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-1);
+    }
+
+    .subs-div {
+        display: flex;
+        align-items: center;
+        gap: .15cm;
+    }
+
+    .book {
+        width: .4cm;
+    }
+
+    .course-included {
+        margin-top: .3cm;
+        display: flex;
+        flex-direction: column;
+        gap: .3cm;
+        padding-bottom: .2cm;
+    }
+
+    .included-head {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .nsubs {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    .course-page-name {
+        font-size: 2.25rem;
+        font-weight: 500;
+    }
+
+    .course-desc {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .contents-course-page {
+        font-size: 1.625rem;
+        font-weight: 500;
+        margin-top: .2cm;
+    }
+
+    .course-page-sub {
+        display: flex;
+        align-items: flex-start;
+        gap: .5cm;
+    }
+
+    .sub-dets {
+        display: flex;
+        flex-direction: column;
+        gap: .2cm;
+
+    }
+
+    .sub-name {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .sub-videos {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    .sub-img {
+        width: 5cm;
+        border-radius: 10px;
+    }
+
+    .course-page-subjects {
+        display: flex;
+        flex-direction: column;
+        gap: .5cm;
+
+        border: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        border-radius: 10px;
+        padding: .4cm;
+        overflow-y: auto;
+        max-height: 15cm;
     }
 }
