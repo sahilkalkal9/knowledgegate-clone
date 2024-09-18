@@ -13,7 +13,7 @@ html {
 .NavBar {
     background-color: var(--theme-ui-colors-border-basic-color-1);
     // width: 100%;
-    padding: .3cm 10vw;
+    padding: .32cm 10vw;
 
     .nav {
         display: flex;
@@ -73,7 +73,7 @@ html {
     // border: 1px solid white;
 
     .welcome-div {
-        padding: 1.1cm 10vw;
+        padding: 1.06cm 10vw;
         background: linear-gradient(90deg, var(--theme-ui-colors-color-primary-800) 20%, var(--theme-ui-colors-color-primary-400) 80%);
     }
 
@@ -81,6 +81,13 @@ html {
         font-size: 36px;
         color: white;
         font-weight: 500;
+    }
+
+    .courses-box {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .4cm;
     }
 
     .courses-head {
@@ -118,6 +125,7 @@ html {
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        cursor: pointer;
     }
 
     .course-dets-box {
@@ -146,6 +154,12 @@ html {
         font-size: 0.875rem;
         font-weight: 400;
     }
+
+    .lessons {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
 
     .courses-box {
         margin-top: .5cm;
