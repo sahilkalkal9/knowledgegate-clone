@@ -581,3 +581,116 @@ html {
         flex-direction: column;
     }
 }
+
+.SignIn {
+    padding: 1cm 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .signin-logo {
+        width: 4cm;
+        height: auto;
+    }
+
+    .create-account-head {
+        font-size: 1.625rem;
+        font-weight: 500;
+    }
+
+    .signin-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5cm;
+
+        // border: 1px solid white;
+        width: fit-content;
+    }
+
+    .signin-form {
+        display: flex;
+        flex-direction: column;
+        gap: .5cm;
+        width: 8cm;
+    }
+
+    .google {
+        width: 8cm;
+        padding: .3cm;
+        background-color: #4285F4;
+        border: 1px solid #4285F4;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .already-account {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .signin-button {
+        font-size: .75rem;
+        font-weight: 400;
+        color: var(--theme-ui-colors-link);
+        opacity: 0.8;
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+
+    .signin-input {
+        background-color: rgb(16, 20, 38);
+        border-radius: 4px;
+        border: 1px solid rgb(34, 43, 69);
+        padding: .3cm;
+        font-size: 1rem;
+    }
+
+    .signin-submit {
+        background-color: var(--theme-ui-colors-border-basic-color-4);
+        border: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        font-size: 1rem;
+        padding: .3cm;
+        border-radius: 4px;
+        color: #99cfff;
+    }
+
+    .forget {
+        font-size: 0.75rem;
+        font-weight: 400;
+        cursor: pointer;
+        user-select: none;
+
+        text-decoration-line: underline;
+
+        color: var(--theme-ui-colors-text-basic-color-2);
+        opacity: 0.8;
+
+    }
+
+    .explore {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .explorebut {
+        font-size: .75rem;
+        font-weight: 400;
+        text-decoration-line: underline;
+        color: var(--theme-ui-colors-link);
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .esign{
+        margin-top: .3cm;
+    }
+
+    .agreement {
+        margin-top: .5cm;
+        font-size: .75rem;
+        font-weight: 400;
+    }
+
+}

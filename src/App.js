@@ -4,6 +4,8 @@ import Nav from "./components/nav";
 import "./global.scss"
 import CoursePage from "./components/coursePage/coursePage";
 import VideoPage from "./components/videoPage/videoPage";
+import SignIn from "./components/signin/signin";
+import SignUp from "./components/signup/signup";
 
 function App() {
 
@@ -54,13 +56,15 @@ function App() {
   return (
     <div className="App">
       {
-        isActive("/learn/GATE-Guidance-Plus-2025/classes") ? null : <Nav />
+        isActive("/learn/GATE-Guidance-Plus-2025/classes") || isActive("/signin") || isActive("/signup") ? null : <Nav />
       }
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/learn/GATE-Guidance-Plus-2025" element={<CoursePage />} />
         <Route path="/learn/GATE-Guidance-Plus-2025/classes" element={<VideoPage />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
 
 

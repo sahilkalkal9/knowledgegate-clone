@@ -13,12 +13,16 @@ function Nav() {
                 <div className="menu">
                     <p className="menu-item">Community</p>
                     <p className="menu-item">Newsfeed</p>
-                    <button className="signin-nav" >
-                        SIGN IN
-                    </button>
-                    <button className="signup-nav" >
-                        SIGN UP
-                    </button>
+                    <Link to="/signin">
+                        <button className="signin-nav" >
+                            SIGN IN
+                        </button>
+                    </Link>
+                    <Link to="/signup">
+                        <button className="signup-nav" >
+                            SIGN UP
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
