@@ -44,13 +44,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <button onClick={handlePayment}>
+      <button onClick={handlePayment}>
         Pay Now
-      </button> */}
+      </button>
 
-      <a href='https://rzp.io/l/boZdtKh3dl' target='blank' >
-        Pay Now
-      </a>
+      
 
     </div>
   );
