@@ -1,6 +1,8 @@
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/home/home";
 import Nav from "./components/nav";
 import "./global.scss"
+import CoursePage from "./components/coursePage/coursePage";
 
 function App() {
 
@@ -47,7 +49,10 @@ function App() {
     <div className="App">
       <Nav />
 
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/learn/GATE-Guidance-Plus-2025" element={<CoursePage />} />
+      </Routes>
 
 
 

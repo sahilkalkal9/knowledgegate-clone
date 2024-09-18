@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../../global.scss"
 
 function Home() {
@@ -19,9 +20,11 @@ function Home() {
                                 <img className="course-img" src="https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/86062/courses/92935/1683868440820aptitude%20%282%29.png" />
                             </div>
                             <div className="course-dets-box">
-                                <h6 className="course-name">
-                                    Aptitude Master Course by Yash Jain Sir
-                                </h6>
+                                <Link to="/learn/GATE-Guidance-Plus-2025">
+                                    <h6 className="course-name">
+                                        Aptitude Master Course by Yash Jain Sir
+                                    </h6>
+                                </Link>
                                 <p className="lessons" >
                                     151 lessons
                                 </p>

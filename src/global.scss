@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
     font-family: 'DM Sans';
     color: white;
 }
@@ -165,4 +166,90 @@ html {
         margin-top: .5cm;
     }
 
+}
+
+.CoursePage {
+    padding: 1cm 10vw;
+    border-top: 1px solid var(--theme-ui-colors-border-basic-color-4);
+
+    .course-page {
+        display: flex;
+        gap: .7cm;
+    }
+
+    .course-page-right {
+        width: 500px;
+        // min-width: 320px;
+        height: auto;
+        // border: 1px solid white;
+        padding: 12px;
+        border-radius: 10px;
+        background-color: var(--theme-ui-colors-border-basic-color-4);
+    }
+
+    .course-page-left {
+        width: 100%;
+        border: 1px solid red;
+
+    }
+
+    .course-page-img-box {
+        width: 100%;
+    }
+
+    .course-page-img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .course-page-price-div {
+        display: flex;
+        align-items: center;
+        gap: .3cm;
+    }
+
+    .course-page-price {
+        font-weight: 500;
+        font-size: 1.625rem;
+    }
+
+    .course-page-price-real {
+        font-weight: 500;
+        font-size: 1rem;
+        color: rgb(143, 155, 179);
+        text-decoration-line: line-through;
+    }
+
+    .expire-text {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    .expire-div {
+        display: flex;
+        align-items: center;
+        gap: .1cm;
+    }
+
+    .stopwatch {
+        width: .45cm;
+    }
+
+    .buy-now-course-page {
+        background-color: #99cfff;
+        color: #222b45;
+        width: 100%;
+        border: 1px solid #99cfff;
+        border-radius: 5px;
+        padding: 12px 10px;
+        font-size: 16px;
+        margin-top: .3cm;
+    }
+    .course-page-right-lower{
+        display: flex;
+        flex-direction: column;
+        gap: .2cm;
+        margin-top: 12px;
+        padding-bottom: .3cm;
+    }
 }
