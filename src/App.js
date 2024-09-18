@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./components/home/home";
+import Nav from "./components/nav";
+import "./global.scss"
 
 function App() {
 
@@ -44,11 +45,11 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handlePayment}>
-        Pay Now
-      </button>
+      <Nav />
 
-      
+      <Home />
+
+
 
     </div>
   );
