@@ -5,6 +5,8 @@ import { Link, useParams } from "react-router-dom"
 import Iframe from "react-iframe"
 import courses from "../../courses.json"
 import { useState } from "react"
+import { auth, firestore } from "../../firebase"
+import { useCollectionData } from "react-firebase-hooks/firestore"
 
 function VideoPage() {
 
@@ -16,7 +18,10 @@ function VideoPage() {
     const [videoUrl, setVideoUrl] = useState("")
     const [videoName, setVideoName] = useState("")
 
-    console.log(videoName, videoUrl)
+    // console.log(videoName, videoUrl)
+    const coursesRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("courses")
+    const [coursesO] = useCollectionData(coursesRef)
+    const courseBought = coursesO && coursesO.some(co => co.id == courseID)
 
 
 
@@ -44,40 +49,72 @@ function VideoPage() {
 
 
                                                 <div className="video-player">
-                                                    {/* <div className="vp-course-dets-box">
-                                                    <div className="video-player-course-dets">
-                                                        <h4 className="vp-course-name">
-                                                            Blue Print of DIscrete Mathematics
-                                                        </h4>
-                                                        <div className="vp-course-price-div">
-                                                            <h5 className="vp-course-price-dis">
-                                                                ₹ 40,906
-                                                            </h5>
-                                                            <p className="vp-course-price">
-                                                                ₹ 81,812
-                                                            </p>
-                                                        </div>
-                                                        <p className="tilldate">
-                                                            Till Jul 31, 2025
-                                                        </p>
-                                                        <button className="vp-buy-now">
-                                                            BUY NOW
-                                                        </button>
-                        
-                                                        <p className="signinvp">
-                                                            Already purchased ? <span className="signintext">
-                                                                SIGN IN
-                                                            </span>
-                                                        </p>
-                                                    </div>
-                                                </div> */}
                                                     {
-                                                        videoUrl == ""
-                                                            ? <p>Select video to play</p>
-                                                            :
-                                                            <Iframe className="video-iframe" url={videoUrl} >
-                                                            </Iframe>
+                                                        !auth.currentUser
+                                                            ? (
+                                                                <div className="vp-course-dets-box">
+                                                                    <div className="video-player-course-dets">
+                                                                        <h4 className="vp-course-name">
+                                                                            Blue Print of DIscrete Mathematics
+                                                                        </h4>
+                                                                        <div className="vp-course-price-div">
+                                                                            <h5 className="vp-course-price-dis">
+                                                                                ₹ 40,906
+                                                                            </h5>
+                                                                            <p className="vp-course-price">
+                                                                                ₹ 81,812
+                                                                            </p>
+                                                                        </div>
+                                                                        <p className="tilldate">
+                                                                            Till Jul 31, 2025
+                                                                        </p>
+                                                                        <button className="vp-buy-now">
+                                                                            BUY NOW
+                                                                        </button>
+
+                                                                        <p className="signinvp">
+                                                                            Already purchased ? <span className="signintext">
+                                                                                SIGN IN
+                                                                            </span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            )
+                                                            : auth.currentUser && courseBought
+                                                                ? (
+                                                                    videoUrl == ""
+                                                                        ? <p>Select video to play</p>
+                                                                        :
+                                                                        <Iframe className="video-iframe" url={videoUrl} >
+                                                                        </Iframe>
+                                                                )
+                                                                : (
+                                                                    <div className="vp-course-dets-box">
+                                                                        <div className="video-player-course-dets">
+                                                                            <h4 className="vp-course-name">
+                                                                                Blue Print of DIscrete Mathematics
+                                                                            </h4>
+                                                                            <div className="vp-course-price-div">
+                                                                                <h5 className="vp-course-price-dis">
+                                                                                    ₹ 40,906
+                                                                                </h5>
+                                                                                <p className="vp-course-price">
+                                                                                    ₹ 81,812
+                                                                                </p>
+                                                                            </div>
+                                                                            <p className="tilldate">
+                                                                                Till Jul 31, 2025
+                                                                            </p>
+                                                                            <button className="vp-buy-now">
+                                                                                BUY NOW
+                                                                            </button>
+
+
+                                                                        </div>
+                                                                    </div>
+                                                                )
                                                     }
+
 
                                                 </div>
 

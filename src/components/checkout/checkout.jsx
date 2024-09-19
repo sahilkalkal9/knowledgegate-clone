@@ -80,11 +80,18 @@ function Checkout() {
                 amount: Number(bprice) * 100, // amount in paisa
                 currency: 'INR',
                 name: 'Knowledge Gate',
-                notes: String(cdesc),
+
                 description: String(name),
                 prefill: {
                     email: userDetails.email,
                     contact: userDetails.phone
+                },
+                notes: {
+                    customer_name: userDetails.name,
+                    customer_phone: userDetails.phone,
+                    customer_address: userDetails.address,
+                    course_name: name,
+                    course_description: cdesc
                 },
                 handler: async function (response) {
                     await firestore.collection("users").doc(user?.uid).set({
