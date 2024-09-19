@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import "../global.scss"
 import kglogo from "./kglogo.png"
+import userr from "./userr.png"
 
 function Nav() {
     return (
@@ -22,6 +23,9 @@ function Nav() {
                         <button className="signup-nav" >
                             SIGN UP
                         </button>
+                    </Link>
+                    <Link to="account">
+                        <img className="userr" src={userr} />
                     </Link>
                 </div>
             </div>

@@ -78,6 +78,24 @@ html {
         box-sizing: border-box;
         font-weight: 400;
     }
+
+    .userr {
+        width: 1.2cm;
+    }
+
+    .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        width: 5cm;
+        position: fixed;
+        z-index: 10;
+        background-color: #151a30;
+
+
+        a {
+            padding: .3cm;
+        }
+    }
 }
 
 .Home {
@@ -683,7 +701,7 @@ html {
         cursor: pointer;
     }
 
-    .esign{
+    .esign {
         margin-top: .3cm;
     }
 
@@ -693,4 +711,319 @@ html {
         font-weight: 400;
     }
 
+}
+
+.Account {
+    .account-sec {
+        padding: 1cm 10vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1cm;
+    }
+
+    .account-dets {
+        display: flex;
+        gap: .5cm;
+    }
+
+    .account-dets-left {
+        width: 7cm;
+        // border: 1px solid white;
+        padding-right: .2cm;
+        border-right: 1px solid var(--theme-ui-colors-border-basic-color-3);
+    }
+
+    .account-dets-right {
+        width: 100%;
+        // border: 1px solid red;
+    }
+
+    .account-text {
+        font-size: 1.875rem;
+    }
+
+    .acc-dets-text {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .account-dets-menu {
+        display: flex;
+        flex-direction: column;
+        gap: .1cm;
+    }
+
+    .account-dets-menu-item {
+        display: flex;
+        align-items: center;
+        gap: .3cm;
+        padding: .4cm;
+        cursor: pointer;
+        // border: 1px solid white;
+        border-radius: 5px;
+        background-color: transparent;
+
+        &:hover {
+            background-color: var(--theme-ui-colors-border-basic-color-4);
+        }
+    }
+
+    .activeM {
+        background-color: var(--theme-ui-colors-border-basic-color-4);
+    }
+
+    .acc-dets-img {
+        width: .7cm;
+    }
+}
+
+.Profile {
+    .profile-box {
+        border: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        padding: .5cm;
+        border-radius: 10px;
+    }
+
+    .profile-box-det {
+        display: flex;
+        align-items: center;
+        gap: .2cm;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-3);
+        padding: .5cm 0cm;
+    }
+
+    .write {
+        width: .4cm;
+        opacity: .8;
+        cursor: pointer;
+    }
+
+    .profile-det-head {
+        display: flex;
+
+        gap: .5cm;
+
+    }
+
+    .profile-det-label {
+        width: 4cm;
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--theme-ui-colors-text-basic-color-2);
+        // border: 1px solid red;
+    }
+
+    .profile-det-text {
+        font-size: 1rem;
+    }
+}
+
+.Enrollments {
+    .enrollment-box {
+        border: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        border-radius: 10px;
+        padding: .5cm;
+    }
+
+    .enroll-img {
+        width: 7cm;
+        border-radius: 10px;
+    }
+
+    .enrollments {
+        display: flex;
+        flex-direction: column;
+        gap: .3cm;
+    }
+
+    .enrollment {
+        display: flex;
+        gap: .5cm;
+        background-color: var(--theme-ui-colors-border-basic-color-4);
+        padding: .3cm;
+        border-radius: 10px;
+
+    }
+
+    .enrollment-right {
+        display: flex;
+        gap: .3cm;
+        flex-direction: column;
+
+    }
+
+    .purchased {
+        color: #151a30;
+        background-color: rgb(254, 244, 207);
+        width: fit-content;
+        padding: .1cm .2cm;
+        font-size: small;
+        border-radius: 5px;
+    }
+
+    .enrolll-name {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .enroll-subs {
+        font-size: 0.875rem;
+        color: rgb(197, 197, 197);
+    }
+
+    .account-outlet-head {
+        font-size: 1.375rem;
+        font-weight: 500;
+        margin-bottom: .2cm;
+    }
+}
+
+.Invoices {
+    border: 1px solid var(--theme-ui-colors-border-basic-color-4);
+    border-radius: 10px;
+    padding: .5cm;
+
+    .account-outlet-head {
+        font-size: 1.375rem;
+        font-weight: 500;
+        margin-bottom: .2cm;
+    }
+
+    .invoices {
+        display: flex;
+        flex-direction: column;
+        gap: .3cm;
+    }
+
+    .invoice {
+        display: flex;
+        align-items: center;
+        gap: .3cm;
+        justify-content: space-between;
+        background-color: var(--theme-ui-colors-border-basic-color-4);
+        padding: .5cm .5cm;
+        border-radius: 5px;
+    }
+
+    .invoice-name {
+        font-size: 1rem;
+        font-weight: 500;
+
+    }
+
+    .dimg {
+        width: .5cm;
+        cursor: pointer;
+    }
+
+}
+
+.Checkout {
+    padding: 1cm 10vw;
+
+    .checkout-box {
+        display: flex;
+        gap: .5cm;
+
+    }
+
+    .checkout-left {
+        width: 100%;
+        border: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        padding: 0.5cm;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: .5cm;
+    }
+
+    .checkout-right {
+        width: 12cm;
+        border: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        flex-shrink: 0;
+        border-radius: 10px;
+        height: fit-content;
+        padding: .5cm;
+        display: flex;
+        flex-direction: column;
+        gap: .5cm;
+    }
+
+    .checkout-img {
+        width: 3cm;
+        border-radius: 5px;
+    }
+
+    .checkout-left-div {
+        display: flex;
+        align-items: flex-start;
+        gap: .3cm;
+    }
+
+    .checkout-name {
+        font-size: 1.375rem;
+        font-weight: 500;
+    }
+
+    .checkout-per-dets {
+        display: flex;
+        flex-direction: column;
+        width: 10cm;
+        gap: .3cm;
+
+    }
+
+    .checout-input {
+        padding: .3cm;
+        background-color: transparent;
+        border: 1px solid var(--theme-ui-colors-border-basic-color-4);
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .pdets {
+        margin-top: .5cm;
+    }
+
+    .pay-det {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .item-head {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .pay-main {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .disPay {
+        color: rgb(232, 251, 196);
+    }
+
+    .subtotal {
+        border-bottom: 1px solid rgb(21, 26, 48);
+        padding-bottom: .5cm;
+    }
+
+    .pay-securely {
+        padding: .4cm 1cm;
+        color: #151a30;
+        background-color: #99cfff;
+        border: 1px solid #99cfff;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin-top: .5cm;
+        width: fit-content;
+        cursor: pointer;
+    }
+
+    .pay-button-div {
+        display: flex;
+        justify-content: flex-end;
+    }
 }

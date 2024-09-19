@@ -136,9 +136,11 @@ function CoursePage() {
 
                         </div>
 
-                        <button className="buy-now-course-page" >
-                            BUY NOW
-                        </button>
+                        <Link to="/learn/GATE-Guidance-Plus-2025/checkout">
+                            <button className="buy-now-course-page" >
+                                BUY NOW
+                            </button>
+                        </Link>
 
                     </div>
                     <div className="course-included">

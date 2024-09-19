@@ -6,6 +6,11 @@ import CoursePage from "./components/coursePage/coursePage";
 import VideoPage from "./components/videoPage/videoPage";
 import SignIn from "./components/signin/signin";
 import SignUp from "./components/signup/signup";
+import Account from "./components/account/account";
+import Profile from "./components/profile/profile";
+import Enrollment from "./components/enrollments/enrollments";
+import Invoices from "./components/invoices/invoices";
+import Checkout from "./components/checkout/checkout";
 
 function App() {
 
@@ -47,6 +52,8 @@ function App() {
       rzp.open();
     };
   };
+
+
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
@@ -65,6 +72,13 @@ function App() {
         <Route path="/learn/GATE-Guidance-Plus-2025/classes" element={<VideoPage />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/account" element={<Account />} >
+          <Route index element={<Profile />} />
+          <Route path="/account/profile" element={<Profile />} />
+          <Route path="/account/enrollments" element={<Enrollment />} />
+          <Route path="/account/invoices" element={<Invoices />} />
+        </Route>
+        <Route path="/learn/GATE-Guidance-Plus-2025/checkout" element={<Checkout />} />
       </Routes>
 
 
