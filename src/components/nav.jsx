@@ -25,8 +25,7 @@ function Nav() {
                 </Link>
 
                 <div className="menu">
-                    <p className="menu-item">Community</p>
-                    <p className="menu-item">Newsfeed</p>
+
                     {
                         !user
                             ? <Link to="/signin">

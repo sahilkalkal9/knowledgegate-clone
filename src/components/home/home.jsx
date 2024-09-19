@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom"
 import "../../global.scss"
 import courses from "../../courses.json"
+import { auth } from "../../firebase"
 
 function Home() {
     return (
         <div className="Home">
             <div className="welcome-div">
+                {
+                    auth.currentUser
+                        ? <p className="hi-text">
+                            Hi {auth.currentUser.displayName},
+                        </p>
+                        : null
+                }
                 <h1 className="welcome">
                     Welcome to Knowledge Gate
                 </h1>
@@ -33,7 +41,7 @@ function Home() {
                                         </p>
                                         <div className="course-price-box">
                                             <h6 className="course-dis-price">
-                                               {c.price}
+                                                {c.price}
                                             </h6>
                                             <p className="course-price">
                                                 {c.cut_price}
