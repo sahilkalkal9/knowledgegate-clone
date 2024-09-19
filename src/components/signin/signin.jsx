@@ -1,8 +1,49 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../global.scss"
 import kglogo from "./kg logo.png"
+import { firestore, auth } from "../../firebase";
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+
+
+
 
 function SignIn() {
+
+    const usersRef = firestore.collection("users")
+    const [users] = useCollectionData(usersRef)
+    const navigate = useNavigate()
+
+
+
+
+
+
+
+    const handleSignIn = async () => {
+
+        const provider = new GoogleAuthProvider()
+        await signInWithPopup(auth, provider)
+            .then(() => {
+                firestore.collection("users").doc(auth.currentUser.uid).set({
+                    uid: auth.currentUser.uid,
+                    photo: auth.currentUser.photoURL,
+                    name: auth.currentUser.displayName,
+                    email : auth.currentUser.email
+                   
+                },{merge : true})
+            })
+        navigate("/")
+
+
+
+    }
+
+
+
+
+
+
     return (
         <div className="SignIn">
             <div className="signin-box">
@@ -32,7 +73,7 @@ function SignIn() {
                     or
                 </p>
 
-                <button className="google">
+                <button onClick={handleSignIn} className="google">
                     Continue with Google
                 </button>
 

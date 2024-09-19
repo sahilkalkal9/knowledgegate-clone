@@ -14,62 +14,30 @@ import Checkout from "./components/checkout/checkout";
 
 function App() {
 
-  const handlePayment = async (e) => {
-    e.preventDefault();
-
-    const script = document.createElement('script');
-    script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      const options = {
-        key: 'rzp_test_a5IHmEsWCCdHsy', // Replace with your Razorpay Key ID
-        amount: 500 * 100, // amount in paisa
-        currency: 'INR',
-        name: 'Chemictionary',
-        description: 'GATE Guide Course 2025',
-        prefill: {
-          email: "sahilkalkal108@gmail.com",
-          contact: "+917982294822"
-        },
-        handler: function (response) {
-          // Payment successful, console the paymentId, orderId, and signature (used as invoiceId)
-          console.log('Payment ID:', response.razorpay_payment_id);
-          console.log('Order ID:', response.razorpay_order_id);
-          console.log('Invoice (Signature) ID:', response.razorpay_signature);
-
-          alert('Payment successful! Check the console for payment details.');
-        },
-        modal: {
-          ondismiss: function () {
-            console.log('Payment modal closed');
-          }
-        }
-      };
-
-      const rzp = new window.Razorpay(options);
-      rzp.open();
-    };
-  };
+ 
 
 
   const location = useLocation();
 
-  const isActive = (path) => location.pathname === path;
+  // const isActive = (path) => location.pathname === path;//
+
+  const isActive = (path) => {
+    return window.location.pathname.match(new RegExp(`^${path.replace(/:\w+/g, '\\w+')}$`));
+  };
+
 
 
 
   return (
     <div className="App">
       {
-        isActive("/learn/GATE-Guidance-Plus-2025/classes") || isActive("/signin") || isActive("/signup") ? null : <Nav />
+        isActive("/learn/:courseId/:subjectId") || isActive("/signin") || isActive("/signup") ? null : <Nav />
       }
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/learn/GATE-Guidance-Plus-2025" element={<CoursePage />} />
-        <Route path="/learn/GATE-Guidance-Plus-2025/classes" element={<VideoPage />} />
+        <Route path="/learn/:courseId" element={<CoursePage />} />
+        <Route path="/learn/:courseId/:subjectId" element={<VideoPage />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/account" element={<Account />} >
@@ -78,7 +46,7 @@ function App() {
           <Route path="/account/enrollments" element={<Enrollment />} />
           <Route path="/account/invoices" element={<Invoices />} />
         </Route>
-        <Route path="/learn/GATE-Guidance-Plus-2025/checkout" element={<Checkout />} />
+        <Route path="/learn/:courseId/checkout" element={<Checkout />} />
       </Routes>
 
 

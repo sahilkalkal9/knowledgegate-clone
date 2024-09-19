@@ -1,7 +1,18 @@
+import { useCollectionData } from "react-firebase-hooks/firestore"
+import { auth, firestore } from "../../firebase"
 import "../../global.scss"
 import downloads from "./downloads.png"
 
+
 function Invoices() {
+
+
+    const invoicesRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("invoices")
+    const [invoices] = useCollectionData(invoicesRef)
+
+
+
+
     return (
         <div className="Invoices">
             <div className="invoices-box">
@@ -10,30 +21,21 @@ function Invoices() {
                         Invoices
                     </h5>
 
-                    <div className="invoice">
-                        <p className="invoice-name">
-                            GATE Guidance Plus 2025
-                        </p>
-                        <img className="dimg" src={downloads} />
-                    </div>
-                    <div className="invoice">
-                        <p className="invoice-name">
-                            GATE Guidance Plus 2025
-                        </p>
-                        <img className="dimg" src={downloads} />
-                    </div>
-                    <div className="invoice">
-                        <p className="invoice-name">
-                            GATE Guidance Plus 2025
-                        </p>
-                        <img className="dimg" src={downloads} />
-                    </div>
-                    <div className="invoice">
-                        <p className="invoice-name">
-                            GATE Guidance Plus 2025
-                        </p>
-                        <img className="dimg" src={downloads} />
-                    </div>
+                    {
+                        invoices && invoices == 0
+                            ? <p>No invoices</p>
+                            : (
+                                invoices && invoices.map((i) => (
+                                    <div className="invoice">
+                                        <p className="invoice-name">
+                                            {i.name}
+                                        </p>
+                                        <img className="dimg" src={downloads} />
+                                    </div>
+                                ))
+                            )
+                    }
+
                 </div>
             </div>
         </div>

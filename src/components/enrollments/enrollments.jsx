@@ -1,6 +1,16 @@
+import { useCollectionData } from "react-firebase-hooks/firestore"
+import { auth, firestore } from "../../firebase"
 import "../../global.scss"
 
 function Enrollment() {
+
+
+    const enrollmentsRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("courses")
+
+    const [enrollments] = useCollectionData(enrollmentsRef)
+
+
+
     return (
         <div className="Enrollments">
             <div className="enrollment-box">
@@ -8,82 +18,34 @@ function Enrollment() {
                     <h5 className="account-outlet-head">
                         Enrollments
                     </h5>
-                    <div className="enrollment">
-                        <img className="enroll-img" src="https://imgproxy.learnyst.com/https://asset-cdn.learnyst.com/assets/schools/86062/courses/107833/TCS_Digital_xxvhr1.png?w=262&h=148&resizetype=fill" />
+                    {
+                        enrollments && enrollments == 0
+                            ? <p>No enrollments</p>
+                            : (
+                                enrollments && enrollments.map((en) => (
+                                    <div className="enrollment">
+                                        <img className="enroll-img" src={en.thumbnail} />
 
-                        <div className="enrollment-right">
-                            <p className="enrolll-name">
-                                GATE Guidance Plus 2025
+                                        <div className="enrollment-right">
+                                            <p className="enrolll-name">
+                                                {en.name}
 
-                            </p>
-                            <p className="purchased">
-                                PURCHASED
-                            </p>
-                            <p className="enroll-subs">
-                                10 Subjects
-                            </p>
-                            <p className="enrolll-name">
-                                GATE Guidance Plus 2025
-                            </p>
-                        </div>
-                    </div>
-                    <div className="enrollment">
-                        <img className="enroll-img" src="https://imgproxy.learnyst.com/https://asset-cdn.learnyst.com/assets/schools/86062/courses/107833/TCS_Digital_xxvhr1.png?w=262&h=148&resizetype=fill" />
+                                            </p>
+                                            <p className="purchased">
+                                                PURCHASED
+                                            </p>
+                                            <p className="enroll-subs">
+                                                {en.nos} subjects
+                                            </p>
+                                            <p className="enrolll-name">
+                                                {en.desc}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))
+                            )
+                    }
 
-                        <div className="enrollment-right">
-                            <p className="enrolll-name">
-                                GATE Guidance Plus 2025
-
-                            </p>
-                            <p className="purchased">
-                                PURCHASED
-                            </p>
-                            <p className="enroll-subs">
-                                10 Subjects
-                            </p>
-                            <p className="enrolll-name">
-                                GATE Guidance Plus 2025
-                            </p>
-                        </div>
-                    </div>
-                    <div className="enrollment">
-                        <img className="enroll-img" src="https://imgproxy.learnyst.com/https://asset-cdn.learnyst.com/assets/schools/86062/courses/107833/TCS_Digital_xxvhr1.png?w=262&h=148&resizetype=fill" />
-
-                        <div className="enrollment-right">
-                            <p className="enrolll-name">
-                                GATE Guidance Plus 2025
-
-                            </p>
-                            <p className="purchased">
-                                PURCHASED
-                            </p>
-                            <p className="enroll-subs">
-                                10 Subjects
-                            </p>
-                            <p className="enrolll-name">
-                                GATE Guidance Plus 2025
-                            </p>
-                        </div>
-                    </div>
-                    <div className="enrollment">
-                        <img className="enroll-img" src="https://imgproxy.learnyst.com/https://asset-cdn.learnyst.com/assets/schools/86062/courses/107833/TCS_Digital_xxvhr1.png?w=262&h=148&resizetype=fill" />
-
-                        <div className="enrollment-right">
-                            <p className="enrolll-name">
-                                GATE Guidance Plus 2025
-
-                            </p>
-                            <p className="purchased">
-                                PURCHASED
-                            </p>
-                            <p className="enroll-subs">
-                                10 Subjects
-                            </p>
-                            <p className="enrolll-name">
-                                GATE Guidance Plus 2025
-                            </p>
-                        </div>
-                    </div>
 
                 </div>
             </div>

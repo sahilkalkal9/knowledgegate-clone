@@ -4,6 +4,8 @@ import enroll from "./page.png"
 import invoices from "./dollar-sign.png"
 import support from "./support.png"
 import { Link, Outlet, useLocation } from "react-router-dom"
+import exiti from "./exit.png"
+import { auth } from "../../firebase"
 
 function Account() {
 
@@ -53,6 +55,12 @@ function Account() {
                                 <img className="acc-dets-img" src={support} />
                                 <p className="acc-dets-text">
                                     Helpdesk
+                                </p>
+                            </div>
+                            <div onClick={() => { auth.signOut() }} className="account-dets-menu-item">
+                                <img className="acc-dets-img" src={exiti} />
+                                <p className="acc-dets-text">
+                                    Sign Out
                                 </p>
                             </div>
                         </div>
