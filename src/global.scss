@@ -103,7 +103,7 @@ html {
         padding: 1cm 10vw;
     }
 
-    .hi-text{
+    .hi-text {
         font-size: 1.375rem;
     }
 
@@ -1030,5 +1030,69 @@ html {
     .pay-button-div {
         display: flex;
         justify-content: flex-end;
+    }
+}
+
+.Footer {
+
+    .footer-box {
+        margin-top: 1cm;
+        padding: .3cm 10vw;
+        border-top: 1px solid var(--theme-ui-colors-border-basic-color-4);
+    }
+
+    .footer-img {
+        width: 1.5cm;
+    }
+
+    .footer-menu {
+        display: flex;
+        align-items: center;
+        gap: .3cm;
+        margin-top: .2cm;
+
+    }
+
+    .footer-menu-item {
+        font-size: .75rem;
+        cursor: pointer;
+        color: var(--theme-ui-colors-text-basic-color-2);
+
+        transition: .3s all;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .nou {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.Terms {
+    .terms-box {
+        padding: 1cm 10vw;
+    }
+
+    .terms-head {
+        font-size: 1.375rem;
+    }
+
+    .content-div {
+        margin-top: 1cm;
+    }
+
+    .content-head {
+        font-size: 1.375rem;
+
+    }
+
+
+    .content-text {
+        font-size: 1rem;
+        color: rgb(218, 218, 218);
     }
 }

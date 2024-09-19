@@ -2,15 +2,30 @@ import { Link } from "react-router-dom"
 import "../../global.scss"
 import courses from "../../courses.json"
 import { auth } from "../../firebase"
+import { onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
 
 function Home() {
+
+
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
+
     return (
         <div className="Home">
             <div className="welcome-div">
                 {
-                    auth.currentUser
+                    user
                         ? <p className="hi-text">
-                            Hi {auth.currentUser.displayName},
+                            Hi {user.displayName},
                         </p>
                         : null
                 }

@@ -11,10 +11,14 @@ import Profile from "./components/profile/profile";
 import Enrollment from "./components/enrollments/enrollments";
 import Invoices from "./components/invoices/invoices";
 import Checkout from "./components/checkout/checkout";
+import Footer from "./components/footer/footer";
+import Terms from "./components/terms/terms.jsx";
+import Privacy from "./components/privacy/privacy.js";
+import Refund from "./components/refund/refund.js";
 
 function App() {
 
- 
+
 
 
   const location = useLocation();
@@ -47,8 +51,13 @@ function App() {
           <Route path="/account/invoices" element={<Invoices />} />
         </Route>
         <Route path="/learn/:courseId/checkout" element={<Checkout />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/refund-policy" element={<Refund />} />
       </Routes>
 
+
+      <Footer />
 
 
     </div>
