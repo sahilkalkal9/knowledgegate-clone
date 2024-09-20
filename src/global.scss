@@ -412,12 +412,13 @@ html {
     @media only screen and (max-width : 1000px) {
         .course-page {
             flex-direction: column-reverse;
-            gap: 2cm;
+            gap: .5cm;
         }
 
         .course-page-subjects {
             max-height: auto;
             height: auto;
+            margin-top: 1cm;
         }
     }
 
