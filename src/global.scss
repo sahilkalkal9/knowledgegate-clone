@@ -27,7 +27,7 @@ html {
 .NavBar {
     background-color: var(--theme-ui-colors-border-basic-color-1);
     // width: 100%;
-    padding: .32cm 10vw;
+    padding: .32cm 5vw;
 
     .nav {
         display: flex;
@@ -110,7 +110,7 @@ html {
 
 .Home {
     .home-lower {
-        padding: 1cm 10vw;
+        padding: 1cm 5vw;
     }
 
     .hi-text {
@@ -120,7 +120,7 @@ html {
     // border: 1px solid white;
 
     .welcome-div {
-        padding: 1.06cm 10vw;
+        padding: 1.06cm 5vw;
         background: linear-gradient(90deg, var(--theme-ui-colors-color-primary-800) 20%, var(--theme-ui-colors-color-primary-400) 80%);
     }
 
@@ -225,7 +225,7 @@ html {
 
 
 .CoursePage {
-    padding: 1cm 10vw;
+    padding: 1cm 5vw;
     border-top: 1px solid var(--theme-ui-colors-border-basic-color-4);
 
     .course-page {
@@ -456,7 +456,7 @@ html {
     .video-page {
         display: flex;
         height: 83svh;
-        padding: .5cm 10vw;
+        padding: .5cm 5vw;
     }
 
 
@@ -694,7 +694,7 @@ html {
             display: flex;
             height: auto;
             flex-direction: column;
-            padding: .5cm 10vw;
+            padding: .5cm 5vw;
         }
 
         .author-section,
@@ -728,7 +728,7 @@ html {
 }
 
 .SignIn {
-    padding: 1cm 10vw;
+    padding: 1cm 5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -842,7 +842,7 @@ html {
 
 .Account {
     .account-sec {
-        padding: 1cm 10vw;
+        padding: 1cm 5vw;
         display: flex;
         flex-direction: column;
         gap: 1cm;
@@ -1047,7 +1047,7 @@ html {
 }
 
 .Checkout {
-    padding: 1cm 10vw;
+    padding: 1cm 5vw;
 
     .checkout-box {
         display: flex;
@@ -1180,7 +1180,7 @@ html {
 
     .footer-box {
         margin-top: 1cm;
-        padding: .3cm 10vw;
+        padding: .3cm 5vw;
         border-top: 1px solid var(--theme-ui-colors-border-basic-color-4);
     }
 
@@ -1218,7 +1218,7 @@ html {
 
 .Terms {
     .terms-box {
-        padding: 1cm 10vw;
+        padding: 1cm 5vw;
     }
 
     .terms-head {
