@@ -56,9 +56,9 @@ function VideoPage() {
                                                     <Link to={`/learn/${courseID}`}>
                                                         <img className="larr" src={larr} />
                                                     </Link>
-                                                    {/* <p className="sub-name-video">
-                                                        Discrete Mathematics for GATE
-                                                    </p> */}
+                                                    <p className="sub-name-video">
+                                                        {cs.name}
+                                                    </p>
                                                 </div>
 
 
@@ -69,7 +69,7 @@ function VideoPage() {
                                                                 <div className="vp-course-dets-box">
                                                                     <div className="video-player-course-dets">
                                                                         <h4 className="vp-course-name">
-                                                                            Please buy this course to see lectures.
+                                                                            {c.name}
                                                                         </h4>
                                                                         <div className="vp-course-price-div">
                                                                             <h5 className="vp-course-price-dis">
@@ -80,11 +80,13 @@ function VideoPage() {
                                                                             </p>
                                                                         </div>
                                                                         <p className="tilldate">
-                                                                            Till Jul 31, 2025
+                                                                            {c.validity}
                                                                         </p>
-                                                                        <button className="vp-buy-now">
-                                                                            BUY NOW
-                                                                        </button>
+                                                                        <Link to={`/learn/${courseID}/checkout`}>
+                                                                            <button className="vp-buy-now">
+                                                                                BUY NOW
+                                                                            </button>
+                                                                        </Link>
 
                                                                         <p className="signinvp">
                                                                             Already purchased ? <span className="signintext">
@@ -106,22 +108,24 @@ function VideoPage() {
                                                                     <div className="vp-course-dets-box">
                                                                         <div className="video-player-course-dets">
                                                                             <h4 className="vp-course-name">
-                                                                                Please buy this course to see lectures.
+                                                                                {c.name}
                                                                             </h4>
                                                                             <div className="vp-course-price-div">
                                                                                 <h5 className="vp-course-price-dis">
-                                                                                    ₹ 40,906
+                                                                                    {c.price}
                                                                                 </h5>
                                                                                 <p className="vp-course-price">
-                                                                                    ₹ 81,812
+                                                                                    {c.cut_price}
                                                                                 </p>
                                                                             </div>
                                                                             <p className="tilldate">
-                                                                                Till Jul 31, 2025
+                                                                                {c.validity}
                                                                             </p>
-                                                                            <button className="vp-buy-now">
-                                                                                BUY NOW
-                                                                            </button>
+                                                                            <Link to={`/learn/${courseID}/checkout`}>
+                                                                                <button className="vp-buy-now">
+                                                                                    BUY NOW
+                                                                                </button>
+                                                                            </Link>
 
 
                                                                         </div>
