@@ -43,6 +43,8 @@ function Account() {
                                 <h3 className="account-text">
                                     Account
                                 </h3>
+
+                                
                             </div>
                             <div className="account-dets">
                                 <div className="account-dets-left">
