@@ -233,12 +233,7 @@ html {
         gap: .7cm;
     }
 
-    @media only screen and (max-width : 1000px) {
-        .course-page {
-            flex-direction: column-reverse;
-            gap: 2cm;
-        }
-    }
+
 
 
 
@@ -412,6 +407,18 @@ html {
         padding: .4cm;
         overflow-y: auto;
         max-height: 15cm;
+    }
+
+    @media only screen and (max-width : 1000px) {
+        .course-page {
+            flex-direction: column-reverse;
+            gap: 2cm;
+        }
+
+        .course-page-subjects {
+            max-height: auto;
+            height: auto;
+        }
     }
 
     @media only screen and (max-width : 600px) {
