@@ -23,6 +23,20 @@ function VideoPage() {
     const [coursesO] = useCollectionData(coursesRef)
     const courseBought = coursesO && coursesO.some(co => co.id == courseID)
 
+    // courses.map((c) => (
+    //     c.id == courseID
+    //         ? (
+    //             c.subjects.map((cs) => (
+    //                 cs.id == subjectId
+    //                     ? (
+    //                         setVideoName(cs.videos[0].name)
+    //                     )
+    //                     : null
+    //             ))
+    //         )
+    //         : null
+    // ))
+
 
 
 
@@ -42,9 +56,9 @@ function VideoPage() {
                                                     <Link to={`/learn/${courseID}`}>
                                                         <img className="larr" src={larr} />
                                                     </Link>
-                                                    <p className="sub-name-video">
+                                                    {/* <p className="sub-name-video">
                                                         Discrete Mathematics for GATE
-                                                    </p>
+                                                    </p> */}
                                                 </div>
 
 
@@ -55,7 +69,7 @@ function VideoPage() {
                                                                 <div className="vp-course-dets-box">
                                                                     <div className="video-player-course-dets">
                                                                         <h4 className="vp-course-name">
-                                                                            Blue Print of DIscrete Mathematics
+                                                                            Please buy this course to see lectures.
                                                                         </h4>
                                                                         <div className="vp-course-price-div">
                                                                             <h5 className="vp-course-price-dis">
@@ -92,7 +106,7 @@ function VideoPage() {
                                                                     <div className="vp-course-dets-box">
                                                                         <div className="video-player-course-dets">
                                                                             <h4 className="vp-course-name">
-                                                                                Blue Print of DIscrete Mathematics
+                                                                                Please buy this course to see lectures.
                                                                             </h4>
                                                                             <div className="vp-course-price-div">
                                                                                 <h5 className="vp-course-price-dis">
