@@ -96,6 +96,16 @@ html {
             padding: .3cm;
         }
     }
+
+    @media only screen and (max-width : 600px) {
+        .logo {
+            width: 50px;
+        }
+
+        .userr {
+            width: 1cm;
+        }
+    }
 }
 
 .Home {
@@ -138,6 +148,12 @@ html {
         padding: 12px;
         border-radius: 10px;
 
+    }
+
+    @media only screen and (max-width : 600px) {
+        .course {
+            width: 100%;
+        }
     }
 
     .course-img-box {
@@ -202,6 +218,9 @@ html {
         margin-top: .5cm;
     }
 
+
+
+
 }
 
 
@@ -214,16 +233,26 @@ html {
         gap: .7cm;
     }
 
+    @media only screen and (max-width : 1000px) {
+        .course-page {
+            flex-direction: column-reverse;
+        }
+    }
+
+
+
     .course-page-right {
-        width: 500px;
+        width: 320px;
         // min-width: 320px;
         height: auto;
+        flex-shrink: 0;
         // border: 1px solid white;
         padding: 12px;
         border-radius: 10px;
         background-color: var(--theme-ui-colors-border-basic-color-4);
         height: fit-content;
     }
+
 
 
 
@@ -347,6 +376,9 @@ html {
         gap: .5cm;
     }
 
+
+
+
     .sub-dets {
         display: flex;
         flex-direction: column;
@@ -379,6 +411,35 @@ html {
         padding: .4cm;
         overflow-y: auto;
         max-height: 15cm;
+    }
+
+    @media only screen and (max-width : 600px) {
+        .course-page-right {
+            width: calc(100% - 5vw);
+        }
+
+        // .course-page-sub{
+        //     flex-direction: column;
+        // }
+
+        .sub-img {
+            width: 3cm;
+            border-radius: 10px;
+        }
+    }
+
+    @media only screen and (max-width : 500px) {
+
+        .course-page-sub {
+            flex-direction: column;
+            border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-4);
+            padding-bottom: .3cm;
+        }
+
+        .sub-img {
+            width: 100%;
+            border-radius: 10px;
+        }
     }
 }
 
@@ -603,6 +664,58 @@ html {
         display: flex;
         flex-direction: column;
     }
+
+
+    @media only screen and (max-width : 1200px) {
+        .video-page-right {
+            width: 9cm;
+        }
+    }
+
+    @media only screen and (max-width : 1100px) {
+        .video-page-right {
+            width: 8cm;
+        }
+    }
+
+    @media only screen and (max-width : 1000px) {
+
+
+        .video-page {
+            display: flex;
+            height: auto;
+            flex-direction: column;
+            padding: .5cm 10vw;
+        }
+
+        .author-section,
+        .about-bar-vp,
+        .tilldate {
+            display: none;
+        }
+
+
+
+
+        .video-page-left {
+            width: 100%;
+            border-right: 1px solid var(--theme-ui-colors-border-basic-color-4);
+            overflow-y: hidden;
+            max-height: auto;
+        }
+
+        .video-page-right {
+            width: 100%;
+            margin-top: 1cm;
+            flex-shrink: 0;
+            max-height: auto;
+            overflow: hidden;
+
+        }
+    }
+
+
+
 }
 
 .SignIn {
@@ -929,6 +1042,7 @@ html {
 
     .checkout-box {
         display: flex;
+
         gap: .5cm;
 
     }
@@ -1031,6 +1145,26 @@ html {
         display: flex;
         justify-content: flex-end;
     }
+
+
+    @media only screen and (max-width : 1200px) {
+        .checkout-box {
+            flex-direction: column;
+        }
+
+        .checkout-right {
+            width: calc(100% - 6vw);
+
+        }
+
+        .checkout-left {
+            width: calc(100% - 6vw);
+        }
+
+        .checkout-per-dets {
+            width: 100%;
+        }
+    }
 }
 
 .Footer {
@@ -1042,7 +1176,7 @@ html {
     }
 
     .footer-img {
-        width: 1.5cm;
+        width: 1cm;
     }
 
     .footer-menu {
@@ -1050,6 +1184,7 @@ html {
         align-items: center;
         gap: .3cm;
         margin-top: .2cm;
+        flex-wrap: wrap;
 
     }
 

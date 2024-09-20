@@ -28,7 +28,7 @@ function Home() {
                             Hi {user.displayName},
                         </p>
                         : null
-                }
+                } 
                 <h1 className="welcome">
                     Welcome to Knowledge Gate
                 </h1>
