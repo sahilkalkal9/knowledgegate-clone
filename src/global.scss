@@ -28,6 +28,7 @@ html {
     background-color: var(--theme-ui-colors-border-basic-color-1);
     // width: 100%;
     padding: .32cm 5vw;
+    border-bottom: 1px solid var(--theme-ui-colors-border-basic-color-4);
 
     .nav {
         display: flex;
