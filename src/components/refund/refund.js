@@ -33,7 +33,7 @@ function Refund() {
                     </p>
 
                     <p className="content-text">
-                        Questions about the Terms of Service should be sent to us at contact@Chemictionary.com.
+                        Questions about the Terms of Service should be sent to us at contact@Gate World.com.
 
 
                     </p>

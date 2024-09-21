@@ -37,7 +37,7 @@ function Privacy() {
                         <br /><br />
                         How do I withdraw my consent?
                         <br /><br />
-                        If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at contact@Chemictionary.com.
+                        If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at contact@Gate World.com.
 
 
                     </p>
@@ -141,7 +141,7 @@ function Privacy() {
                     </p>
 
                     <p className="content-text">
-                        if you would like to: access, correct, amend or delete any personal information we have about you, contact our Privacy Compliance Officer at contact@Chemictionary.com.
+                        if you would like to: access, correct, amend or delete any personal information we have about you, contact our Privacy Compliance Officer at contact@Gate World.com.
                     </p>
                 </div>
 
