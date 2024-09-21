@@ -843,6 +843,15 @@ html {
         font-weight: 400;
     }
 
+    @media only screen and (max-width : 600px){
+        .signin-form{
+            width: 100%;
+        }
+        .google{
+            width: 100%;
+        }
+    }
+
 }
 
 .Account {
