@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "../../global.scss"
 import kglogo from "./kg logo.png"
 import { auth, firestore } from "../../firebase"
@@ -6,7 +6,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 function SignUp() {
 
-
+    const navigate = useNavigate()
     const handleSignIn = async () => {
 
         const provider = new GoogleAuthProvider()
