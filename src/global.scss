@@ -929,6 +929,7 @@ html {
     width: .8cm;
     height: auto;
     cursor: pointer;
+    display: none;
 }
 
 .overlay-nav {
@@ -958,6 +959,10 @@ html {
 
     .account-dets-left {
         display: none;
+    }
+
+    .menuk {
+        display: flex;
     }
 }
 
@@ -1105,6 +1110,7 @@ html {
         .enrollment {
             flex-direction: column;
         }
+
         .enroll-img {
             width: 100%;
             height: auto;
