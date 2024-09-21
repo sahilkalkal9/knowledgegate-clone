@@ -76,7 +76,7 @@ function Checkout() {
 
         script.onload = () => {
             const options = {
-                key: 'rzp_live_s81SgI1QzQVvkr', // Replace with your Razorpay Key ID
+                key: 'rzp_test_a5IHmEsWCCdHsy', // Replace with your Razorpay Key ID
                 amount: Number(bprice) * 100, // amount in paisa
                 currency: 'INR',
                 name: 'Knowledge Gate',

@@ -1057,7 +1057,7 @@ html {
         padding: .3cm;
         border-radius: 10px;
         align-items: flex-start;
-
+        cursor: pointer;
     }
 
     .enrollment-right {
@@ -1139,6 +1139,7 @@ html {
         display: flex;
         align-items: center;
         gap: .3cm;
+        cursor: pointer;
         justify-content: space-between;
         background-color: var(--theme-ui-colors-border-basic-color-4);
         padding: .5cm .5cm;

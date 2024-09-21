@@ -1,6 +1,7 @@
 import { useCollectionData } from "react-firebase-hooks/firestore"
 import { auth, firestore } from "../../firebase"
 import "../../global.scss"
+import { Link } from "react-router-dom"
 
 function Enrollment() {
 
@@ -23,25 +24,27 @@ function Enrollment() {
                             ? <p>No enrollments</p>
                             : (
                                 enrollments && enrollments.map((en) => (
-                                    <div className="enrollment">
-                                        <img className="enroll-img" src={en.thumbnail} />
+                                    <Link to={`/learn/${en.courseId}`}>
+                                        <div className="enrollment">
+                                            <img className="enroll-img" src={en.thumbnail} />
 
-                                        <div className="enrollment-right">
-                                            <p className="enrolll-name">
-                                                {en.name}
+                                            <div className="enrollment-right">
+                                                <p className="enrolll-name">
+                                                    {en.name}
 
-                                            </p>
-                                            <p className="purchased">
-                                                PURCHASED
-                                            </p>
-                                            <p className="enroll-subs">
-                                                {en.nos} subjects
-                                            </p>
-                                            <p className="enrolll-name">
-                                                {en.desc}
-                                            </p>
+                                                </p>
+                                                <p className="purchased">
+                                                    PURCHASED
+                                                </p>
+                                                <p className="enroll-subs">
+                                                    {en.nos} subjects
+                                                </p>
+                                                <p className="enrolll-name">
+                                                    {en.desc}
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))
                             )
                     }
