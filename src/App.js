@@ -51,9 +51,7 @@ function App() {
           <Route path="/account/invoices" element={<Invoices />} />
         </Route>
         <Route path="/learn/:courseId/checkout" element={<Checkout />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy-policy" element={<Privacy />} />
-        <Route path="/refund-policy" element={<Refund />} />
+       
       </Routes>
 
 
