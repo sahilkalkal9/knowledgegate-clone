@@ -30,7 +30,7 @@ function Home() {
                         : null
                 } 
                 <h1 className="welcome">
-                    Welcome to Knowledge Gate
+                    Welcome to Knowledge Gate Clone
                 </h1>
             </div>
             <div className="home-lower">

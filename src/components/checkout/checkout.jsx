@@ -58,83 +58,7 @@ function Checkout() {
     const [payDone, setPayDone] = useState(false)
 
 
-    const handlePayment = async (e, bprice, name, cid, cpic, nos, cdesc) => {
-        e.preventDefault();
-
-        console.log(name)
-
-        // Validation check for personal details
-        if (!userDetails.name || !userDetails.phone || !userDetails.address) {
-            alert("Please fill all personal details before proceeding.");
-            return;
-        }
-
-        const script = document.createElement('script');
-        script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-        script.async = true;
-        document.body.appendChild(script);
-
-        script.onload = () => {
-            const options = {
-                key: 'rzp_live_s81SgI1QzQVvkr', // Replace with your Razorpay Key ID
-                amount: Number(bprice) * 100, // amount in paisa
-                currency: 'INR',
-                name: 'Knowledge Gate',
-
-                description: String(name),
-                prefill: {
-                    email: userDetails.email,
-                    contact: userDetails.phone
-                },
-                notes: {
-                    customer_name: userDetails.name,
-                    customer_phone: userDetails.phone,
-                    customer_address: userDetails.address,
-                    course_name: name,
-                    course_description: cdesc
-                },
-                handler: async function (response) {
-                    await firestore.collection("users").doc(user?.uid).set({
-                        name: userDetails.name,
-                        phone: userDetails.phone,
-                        address: userDetails.address
-                    }, { merge: true })
-
-                    await firestore.collection("users").doc(user?.uid).collection("courses").doc(response.razorpay_payment_id).set({
-                        name: name,
-                        thumbnail: cpic,
-                        courseId: cid,
-                        nos: nos,
-                        desc: cdesc,
-                        paymentId: response.razorpay_payment_id,
-                        amount: bprice,
-                        purchased: "yes"
-                    })
-
-                    await firestore.collection("users").doc(user?.uid).collection("invoices").doc(response.razorpay_payment_id).set({
-                        name: name,
-                        courseId: cid,
-                        paymentId: response.razorpay_payment_id,
-                        amount: bprice
-                    })
-
-                    await setPayDone(true)
-
-
-
-
-                },
-                modal: {
-                    ondismiss: function () {
-                        console.log('Payment modal closed');
-                    }
-                }
-            };
-
-            const rzp = new window.Razorpay(options);
-            rzp.open();
-        };
-    };
+    
 
 
 
@@ -222,7 +146,7 @@ function Checkout() {
                                                                 <p className="pay-main">{c.price}</p>
                                                             </div>
                                                             <div className="pay-button-div">
-                                                                <button onClick={(e) => handlePayment(e, c.bprice, c.name, c.id, c.thumbnail, c.no_of_s, c.desc)} className="pay-securely">PAY SECURELY</button>
+                                                                <button  className="pay-securely">PAY SECURELY</button>
                                                             </div>
                                                         </div>
                                                     </div>

@@ -26,7 +26,7 @@ function Footer() {
                         </p>
                     </Link>
                     <p className="footer-menu-item nou">
-                        Copyright &copy; 2024 Gate World
+                        Copyright &copy; 2024 Knowledge Gate Clone
                     </p>
                 </div>
             </div>
